@@ -24,7 +24,10 @@
   }
   .player-details-card {
     padding: 0px 10px;
-}
+  }
+  .nav-links ul {
+    gap: 25px;
+  }
   
 }
 
