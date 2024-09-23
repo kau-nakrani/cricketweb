@@ -1,9 +1,11 @@
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links ul');
-const body = document.body; // Reference to body
+window.addEventListener('scroll', function() {
+    const stickyElement = document.getElementById('stickyElement');
+    const scrollPosition = window.scrollY;
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    burger.classList.toggle('toggle');
-    body.classList.toggle('nav-open'); // Add/remove class to body to disable scroll
-});
+    // Add the "show" class when the user scrolls past 200px
+    if (scrollPosition > 200) {
+      stickyElement.classList.add('show');
+    } else {
+      stickyElement.classList.remove('show');
+    }
+  });

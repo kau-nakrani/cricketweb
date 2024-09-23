@@ -1,6 +1,6 @@
 @media (min-width: 992px) {
   .container {
-    max-width: 972px;
+    max-width: 1073px;
   }
 }
 
@@ -19,8 +19,39 @@
 
 
 @media (max-width: 1199px) {
+  .table-nav ul li {
+    padding: 19px 2% 17px;
+  }
+  .player-details-card {
+    padding: 0px 10px;
+}
   
 }
+
+@media (min-width: 1025px) {
+  .trending-container {
+    max-width: 337px;
+  }
+  .ranking-card{
+    max-width: 405.274px;
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 1024px) {
+  .cricket-live-row{
+    flex-direction: column;
+  }
+  .trending-container {
+    order: 3;
+  }
+  .score-app-card{
+    display: none;
+  }
+  
+}
+
 
 @media (min-width: 992px) {
   .footer-row{
@@ -41,48 +72,11 @@
 }
 
 @media (max-width: 991px) {
-  body.nav-open {
-    overflow: hidden;
-  }
-
-  .nav-links ul {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 250px;
-    display: block;
-    background-color: #333;
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
-    overflow: scroll;
-    padding: 120px 13px;
-    text-align: center;
-  }
-
+ 
   .nav-links ul li{
     padding: 10px 0px;
   }
 
-  .nav-links ul.active {
-      transform: translateX(0);
-  }
-
-  .burger {
-      display: flex;
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-9px, 8px);
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-7px, -6px);
-  }
   .footer-list , .download-app{
     text-align: center;
   }
@@ -91,9 +85,49 @@
     margin: 20px 0px;
   }
 
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .nav-links ul {
+    gap: 12px;
+  }
+
 }
 
+@media (min-width: 768px) {
+  .match-start hr{
+    display: none;
+  }
+}
 @media (max-width: 767px) {
+  .navbar{
+    justify-content: center;
+  }
+  .ranking-card ,
+  .trending-container,
+  .nav-links{
+    display: none;
+  }
+  .logo img{
+    height: 75px;
+  }
+  .match-start p{
+    display: none;
+  }
+
+  .match-start{
+    width: 6%;
+    border: none;
+    padding: 0;
+  }
+  .match-start hr{
+    display: block;
+    background: #636895;
+  }
+  .mobile-menu{
+    display: block;
+  }
  
 }
 
@@ -102,15 +136,44 @@
     display: block;
     text-align: center;
   }
-  
+  .table-nav ul li {
+    font-size: 12px;
+  }
+  .team-score svg{
+    min-width: 35px;
+    max-width: 35px;
+  }  
+  .team-score-name h4 {
+    font-size: 13px;
+  }
+  .team-score h6 span {
+    display: block;
+  }
 }
 
 @media (max-width: 479px) {
   .embed-responsive-item {
     max-height: 200px;
   }
+  .logo img {
+    height: 61px;
+  }
 }
 
-@media (max-width: 375px) {
- 
+@media (max-width: 339px) {
+  .team-score{
+    flex-direction: column;
+  }
+  .right-team {
+    order: 2;
+  }
+  .team-score{
+    align-items: start;
+  }
+  .right-team-score{
+    align-items: end;
+  }
+  .container {
+    padding: 0px 12px;
+  }
 }

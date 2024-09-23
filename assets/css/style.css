@@ -6,6 +6,7 @@
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  box-sizing: border-box;
 }
 
 html,
@@ -65,6 +66,8 @@ img{
 .header{
   background: #081736;
   padding: 12px 0px;
+  position: sticky;
+  top: 0;
 }
 
  .navbar {
@@ -102,21 +105,6 @@ img{
   background-color: #575757;
   border-radius: 5px;
 }
-
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 4px;
-  transition: all 0.3s ease;
-}
-
 
 /* footer */
 
@@ -179,8 +167,6 @@ footer{
 }
 
 .trending-players-box{
-  max-width: 337px;
-  width: 100%;
   border-radius: 13px;
   background: #FFF;
   padding: 19px  17px;
@@ -211,6 +197,7 @@ hr{
   justify-content: space-between;
   gap: 10px;
   padding: 0px 20px;
+  flex-wrap: wrap;
 }
 
 .player-details{
@@ -252,45 +239,11 @@ hr{
   width: 100%;
 }
 
-.score-app-card{
-  border-radius: 8px;
-  background-image: linear-gradient(to right, rgba(9, 16, 32, 0.89) 0%, rgba(12, 26, 55, 0.64) 55.79%, rgba(31, 87, 203, 0.00) 112.08%), url('../images/backgrounds/live-score.png');;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 310px;
-  padding: 30px 32px 26px;
-  margin-top: 16px;
-}
-
-.score-app-card h3{
-  color: #FFF;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 25px;
-  font-weight: 800;
-  line-height: 26px; 
-  max-width: 200px;
-}
-
-.score-app-card h3 span{
-  color: #FF6767;
-}
-
-.score-app-card p{
-  color: #FFF;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 19px;
-  letter-spacing: 0.39px;
-  max-width: 250px;
-  margin: 5px 0px 18px;
-}
-
 .table-nav{
-  max-width: 607.283px;
   border-radius: 10px;
   background: #FFF;
   box-shadow: 0px 8px 34px 0px rgba(135, 148, 159, 0.17);
-  padding: 0px 48px;
+  padding: 0px 3%;
 }
 
 .table-nav ul{
@@ -302,7 +255,7 @@ hr{
 }
 
 .table-nav ul li{
-  padding: 19px 30px 17px;
+  padding: 19px 4% 17px;
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
@@ -322,13 +275,11 @@ hr{
   border-radius: 10px;
   background: #ffffff;
   padding: 14px 11px;
-  max-width: 607px;
 }
 
 .team-score-name{
   display: flex;
   align-items: center;
-  display: 5px;
 }
 
 .team-score-name span{
@@ -338,6 +289,7 @@ hr{
   text-transform: uppercase;
   padding-right: 15px ;
   border-right: 1px solid #E7F2F4;
+  min-width: fit-content;
 }
 
 .match-live{
@@ -436,8 +388,6 @@ padding: 0px 10px;
 }
 
 .ranking-card{
-  max-width: 405.274px;
-  width: 100%;
   background: #ffffff ;
   max-height: fit-content ;
   padding: 25px;
@@ -523,7 +473,8 @@ table tr{
 
 table tr th,
 table tr td{
-  padding: 9px 20px;
+  padding: 15px 20px;
+  line-height: normal;
 }
 
 table tr th{
@@ -535,14 +486,18 @@ font-weight: 500;
 table tr td{
   border-bottom: 1px solid #E4E9F0;
   color: #000;
-font-size: 14px;
-font-weight: 500;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .table-country{
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.table-country svg{
+  min-width: fit-content;
 }
 
 .team-space{
@@ -552,3 +507,45 @@ font-weight: 500;
 .team-space hr{
   background: #636895;
 }
+
+.score-app-card{
+  text-align: center;
+}
+
+.mobile-menu{
+  background: #081736;
+  position: sticky;
+  bottom: 0;
+  padding: 18px 0px;
+  display: none;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.mobile-menu.show {
+  transform: translateY(0);
+}
+
+.mobile-menu ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+.mobile-menu ul li a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu ul li a{
+  color: #627293;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active{
+  color: white;
+}
+
