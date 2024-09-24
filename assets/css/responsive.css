@@ -72,6 +72,9 @@
   .footer-list{
     width: 15%;
   }
+  .cricket-bonus{
+    display: none;
+  }
 }
 
 @media (max-width: 991px) {
@@ -95,13 +98,16 @@
   .nav-links ul {
     gap: 12px;
   }
-
+  .table-nav{
+    margin-top: 11px;
+  }
 }
 
 @media (min-width: 768px) {
   .match-start hr{
     display: none;
   }
+  
 }
 @media (max-width: 767px) {
   .navbar{
@@ -131,7 +137,12 @@
   .mobile-menu{
     display: block;
   }
- 
+  .container {
+    padding: 0px 14px;
+  }
+  .cricket-live {
+    padding: 14px 0px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -148,9 +159,15 @@
   }  
   .team-score-name h4 {
     font-size: 13px;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
   }
   .team-score h6 span {
     display: block;
+  }
+  .team-score-crad p{
+    line-height: 14px;
   }
 }
 
@@ -160,6 +177,17 @@
   }
   .logo img {
     height: 61px;
+  }
+  .team-score {
+    gap: 7px;
+    margin: 8px 0px 0px;
+    align-items: start;
+  }
+  .team-score h6{
+    line-height: 20px;
+  }
+  .team-card-scheduled .team-score {
+    align-items: center;
   }
 }
 
@@ -175,8 +203,5 @@
   }
   .right-team-score{
     align-items: end;
-  }
-  .container {
-    padding: 0px 12px;
   }
 }

@@ -272,7 +272,7 @@ hr{
 }
 
 .team-score-crad{
-  margin-top: 16px;
+  margin-top: 14px;
   border-radius: 10px;
   background: #ffffff;
   padding: 14px 11px;
@@ -553,4 +553,13 @@ table tr td{
 
 .cricket-live-team .box-shadow{
   box-shadow: 0px 8px 34px 0px #87949F2B;
+}
+
+.cricket-bonus img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cricket-bonus{
+  line-height: normal;
 }
