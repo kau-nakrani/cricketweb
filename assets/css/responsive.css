@@ -21,6 +21,7 @@
 @media (max-width: 1199px) {
   .table-nav ul li {
     padding: 19px 2% 17px;
+    min-width: fit-content;
   }
   .player-details-card {
     padding: 0px 10px;
@@ -107,7 +108,33 @@
   .match-start hr{
     display: none;
   }
+  .matchs-score{
+    display: flex;
+    align-items: center;
+  }
+  .cricket-result .team-score-box{
+    width: 65%;
+  }
+  .manof-the-match{
+    width: 35%;
+  }
   
+  .match-ground-info{
+    display: flex;
+  }
+  .match-info{
+    display: flex;
+    align-items: center;
+  }
+  .match-info-left{
+    border-right: 1px solid #E7F2F4;
+  }
+  
+  .match-info-left ,
+  .match-info-right{
+    width: 50%;
+    padding: 10px;
+  }
 }
 @media (max-width: 767px) {
   .navbar{
@@ -189,6 +216,21 @@
   .team-card-scheduled .team-score {
     align-items: center;
   }
+  .cricket-result .team-score {
+    display: block;
+  }
+  .match-info-heading {
+    min-width: unset;
+  }
+  .ground-celsius-left, .ground-celsius-right {
+    display: block;
+  }
+  .ground-celsius {
+    width: 100%;
+  }
+  .ground-celsius-details {
+    width: 100%;
+}
 }
 
 @media (max-width: 339px) {
